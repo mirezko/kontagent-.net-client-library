@@ -1,0 +1,42 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+		<title>Kontagent .Net Client API Readme</title>
+	</head>
+	<body>
+	
+	<ol style="line-height:200%">
+	    <li>
+            This is a Net implementation of Kontagent Client API, written in C#.</li>
+
+        <li>
+            This is totally self contained and does not rely on any other libraries. 
+It has been tested in .Net 3.5. 	
+	    <li>
+            To use it, unzip the source code project. It is setup to build as a Class 
+            Library. Build it using Visual Studio and add it as a reference in your app.</li>
+            <li>
+            API Usage:
+                <ul>
+                    <li>Init the KontagentRequestInstance in your your Global.asax 
+                        Application_BeginRequest, by calling KontagentRequestInstance.Init. Pass it the 
+                        Kontagent API and Secret keys.</li>
+                    <li>If you use a Master Page for all your pages, place a call to 
+                        KontagentRequestInstance.OnPageLoad in your Master Page&#39;s Page_Load event. Else 
+                        place it each of your Page&#39;s Page_Load events that you want to track.</li>
+                    <li>All URL&#39;s that you use for Invites, Feed Forms, etc. must be modified with 
+                        Kontagent tracking parameters. Use the KontagentRequestInstance.MungeXXX 
+                        functions to do that.</li>
+                    <li>After invites are sent, call the KontagentRequestInstance.InviteSent function to 
+                        track recipients.</li>
+                    <li>Call KontagentRequestInstance.RecordUserInfo to pass user&#39;s demographic info to 
+                        Kontagnet. To avoid calling it everytime, you can call it only once on install.</li>
+                </ul>
+            <li>To have requests sent over to Kontagent&#39;s Test Server, define KontagentTestMode 
+                key in your web.config AppSettings and set its value to 1. Remember to remove 
+                the key or set it to 0 to switch back to Live servers.</li>
+        <li>If you need help or have questions, email: <a href="mailto:vikas@101apps.com">
+            vikas@101apps.com</a>.</ol>
+	
+	</body>
+</html>
