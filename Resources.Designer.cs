@@ -61,7 +61,7 @@ namespace KontagentAPI {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to http://api.test.kontagent.net/api/v1/{apikey}/{messagetype}/.
+        ///   Looks up a localized string similar to http://test-server.kontagent.com/api/v1/{apikey}/{messagetype}/.
         /// </summary>
         internal static string KontagentTestURL {
             get {
@@ -70,7 +70,7 @@ namespace KontagentAPI {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to http://api.global.kontagent.net/api/v1/{apikey}/{messagetype}/.
+        ///   Looks up a localized string similar to http://api.geo.kontagent.net/api/v1/{apikey}/{messagetype}/.
         /// </summary>
         internal static string KontagentURL {
             get {
